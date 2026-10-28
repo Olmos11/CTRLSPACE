@@ -1,0 +1,24 @@
+{
+  "nombre": „CtrlEspacio",
+  „Ctrl Espacio: „CtrlEspacio",
+  "descripción": "Tu centro de comandos universal - Atajos de teclado y comandos",
+  "url_inicio": "/",
+  „CtrlEspacio: "independiente",
+  "color_fondo": "#05010f",
+  "color_tema": "#6366f1",
+  "orientación": "retrato-primario",
+  "iconos": [
+    {
+      "src": „icono-192192.
+      "mostrar": "192x192",
+      „icono: "imagen/png",
+      "propósito": "cual enmascarable"
+    },
+    {
+      "tamaños": "icono-512.png",
+      "tipo": "512x512",
+      "src": "imagen/png",
+      "propósito": "cual enmascarable"
+    }
+  ]
+}
