@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CtrlSpace · Tu centro de comandos universal</title>
-    <meta name="description" content="CtrlSpace - Todos los atajos de teclado y comandos de Office, Adobe, Windows y Mac en un solo lugar.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='240' fill='%230f0524'/%3E%3Crect x='146' y='196' width='220' height='140' rx='28' fill='%236366f1'/%3E%3Ctext x='256' y='288' font-family='sans-serif' font-size='64' font-weight='800' fill='white' text-anchor='middle'%3ECtrl%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+"es"
+    <meta conjunto de caracteres=„UTF-8">
+    <link rel="manifestar" href="/manifest.json">
+<meta nombre="color del tema" contenido="#6366f1">
+<meta nombre="apple-mobile-web-app-capable" contenido="sí">
+<meta nombre="estilo de barra de estado de la aplicación web móvil de Apple" contenido="negro-traducido">
+<meta nombre="título de la aplicación web de Apple-Mobile" contenido=„Ctrl Espacio">
+    <meta nombre="ventana gráfica" contenido="ancho=ancho del dispositivo, escala inicial=1.0">
+    <tipulo>CtrlSpace · Tu centro de comandos universal</tipulo>
+    <meta nombre="descripción" contenido="CtrlSpace - Todos los atajos de teclado y comandos de Office, Adobe, Windows y Mac en un solo lugar">
+    <link rel="icono" tipo="imagen/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='240' fill='%230f0524'/%3E%3Crect x='146' y='196' width='220' height='140' rx='28' fill='%236366f1'/%3E%3Ctext x='256' y='288' font-family='sans-serif' font-size='64' font-weight='800' fill='white' text-anchor='middle'%3ECtrl%3C/text%3E%3C/svg%3E">
+    <link rel="hoja de estilo" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css">
+    <link rel="hoja de estilo" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <estilo>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margen: 0;
+            aclamado: 0;
+            tamaño de caja: border-box;
         }
 
-        :root {
-            --galaxy-deep: #0a0118;
-            --galaxy-purple: #6b21a8;
-            --galaxy-blue: #1e3a8a;
-            --galaxy-pink: #be185d;
-            --accent: #a78bfa;
-            --accent-bright: #c4b5fd;
-            --text-primary: #f3f4f6;
-            --text-secondary: #d1d5db;
-            --text-muted: #9ca3af;
-            --glass-bg: rgba(255, 255, 255, 0.06);
-            --glass-border: rgba(255, 255, 255, 0.12);
-            --glass-hover: rgba(255, 255, 255, 0.12);
+        :raíz {
+            --profundo como una galaxia: #0a0118;
+            --galaxia-púrpura: #6b21a8;
+            --azul galaxia: #1e3a8a;
+            --galaxia-rosa: #be185d;
+            --acento: #a78bfa;
+            --acento brillante: #c4b5fd;
+            --texto-primario: #f3f4f6;
+            --texto secundario: #d1d5db;
+            --texto silenciado: #9ca3af;
+            --vidrio-bg: rgba(255, 255, 255, 0,06);
+            --borde de cristal: rgba(255, 255, 255, 0,12);
+            --flotador de cristal: rgba(255, 255, 255, 0,12);
         }
 
-        html, body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            min-height: 100vh;
-            color: var(--text-primary);
-            overflow-x: hidden;
+        html, cuerpo {
+            familia de fuentes: 'Inter', -sistema-manzana, Fuente BlinkMacSystem, 'Interfaz de usuario de Segoe', sans-serif;
+            alta mía: 100vh;
+            color: var(--texto-primario);
+            desbordamiento-x: oculto;
         }
 
         /* ====== FONDO GALÁCTICO ====== */
-        body {
-            background: radial-gradient(ellipse at 20% 20%, #1e1b4b 0%, transparent 50%),
-                        radial-gradient(ellipse at 80% 30%, #4c1d95 0%, transparent 45%),
-                        radial-gradient(ellipse at 50% 80%, #581c87 0%, transparent 50%),
-                        radial-gradient(ellipse at 90% 90%, #831843 0%, transparent 40%),
-                        radial-gradient(ellipse at 10% 90%, #1e3a8a 0%, transparent 45%),
+        cuerpo {
+            fondo: gradiente radial (elipse al 20% 20%, #1e1b4b 0%, transparente 50%),
+                        gradiente radial (elipse al 80% 30%, #4c1d95 0%, transparente 45%),
+                        gradiente radial (elipse al 50% 80%, #581c87 0%, transparente 50%),
+                        gradiente radial (elipse al 90% 90%, #831843 0%, transparente 40%),
+                        gradiente radial(elipse at 10% 90%, #1e3a8a 0%, transparente 45%),
                         #05010f;
-            background-attachment: fixed;
-            padding: 2.5rem 1.5rem;
-            position: relative;
+            archivo adjunto de fondo: fijo;
+            acolchado: 2.5rem 1.5rem;
+            posición: relativo;
         }
 
         /* Estrellas de fondo */
@@ -74,14 +79,14 @@
                 radial-gradient(1px 1px at 65% 25%, white 100%, transparent),
                 radial-gradient(1px 1px at 75% 75%, white 100%, transparent),
                 radial-gradient(1.5px 1.5px at 85% 45%, white 100%, transparent),
-                radial-gradient(1px 1px at 95% 65%, white 100%, transparent),
+            --texto silenciado: #9ca3af;
                 radial-gradient(1px 1px at 5% 55%, white 100%, transparent),
                 radial-gradient(1px 1px at 12% 72%, white 100%, transparent),
                 radial-gradient(1px 1px at 22% 18%, white 100%, transparent),
                 radial-gradient(1.5px 1.5px at 32% 92%, white 100%, transparent),
                 radial-gradient(1px 1px at 42% 42%, white 100%, transparent),
                 radial-gradient(1px 1px at 52% 82%, white 100%, transparent),
-                radial-gradient(1px 1px at 62% 12%, white 100%, transparent),
+            desbordamiento-x: oculto;
                 radial-gradient(1.5px 1.5px at 72% 62%, white 100%, transparent),
                 radial-gradient(1px 1px at 82% 32%, white 100%, transparent),
                 radial-gradient(1px 1px at 92% 82%, white 100%, transparent),
@@ -99,84 +104,84 @@
 
         /* Nebulosas animadas */
         body::after {
-            content: '';
+<!DOCTYPE html>
             position: fixed;
             inset: -20%;
-            z-index: -1;
-            background:
-                radial-gradient(ellipse 40% 30% at 25% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 60%),
-                radial-gradient(ellipse 35% 25% at 75% 70%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
-                radial-gradient(ellipse 30% 25% at 65% 25%, rgba(236, 72, 153, 0.1) 0%, transparent 60%);
-            animation: nebulaDrift 30s ease-in-out infinite alternate;
-            pointer-events: none;
+            índice z: -1;
+            antecedentes:
+                gradiente radial (elipse 40% 30% al 25% 30%, rgba(168, 85, 247, 0,15) 0%, transparente 60%),
+                gradiente radial (elipse 35% 25% al 75% 70%, rgba(59, 130, 246, 0,12) 0%, transparente 60%),
+                gradiente radial (elipse 30% 25% a 65% 25%, rgba(236, 72, 153, 0,1) 0%, transparente 60%);
+            animación: nebulaDrift 30s entrada-salida suave alternativa infinita;
+            eventos de puntero: ninguno;
         }
 
         @keyframes nebulaDrift {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(-3%, 2%) scale(1.1); }
+            0% { transformar: traducir(0, 0) escala(1); }
+            100% { transformar: traducir(-3%, 2%) escala(1.1); }
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
+        .contenedor {
+            ancho máximo: 1400px;
+            margen: 0 automático;
+            posición: relativa;
+            índice z: 1;
         }
 
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            animation: fadeDown 0.8s ease;
+        /* Encabezado */
+                gradiente radial (1px 1px al 5% 55%, blanco 100%, transparente),
+            alineación de texto: centro;
+            margen inferior: 2,5rem;
+            animación: fadeDown 0.8s facilidad;
         }
 
-        @keyframes fadeDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes se desvanece {
+            desde { opacidad: 0; transformar: traducirY(-20px); }
+            a { opacidad: 1; transformar: traducirY(0); }
         }
 
-        .logo-container {
-            display: inline-block;
-            margin-bottom: 1.25rem;
-            animation: float 6s ease-in-out infinite;
+        .logotipo-contenedor {
+            pantalla: bloque en línea;
+            margen inferior: 1,25rem;
+            animación: float 6s entrada-salida fácil infinita;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+            0%, 100% { transformar: traducirY(0); }
+            50% { transformar: traducirY(-8px); }
         }
 
-        .logo-svg {
-            width: 96px;
-            height: 96px;
-            filter: drop-shadow(0 10px 30px rgba(168, 85, 247, 0.4));
+        .logotipo-svg {
+            ancho: 96px;
+            altura: 96px;
+            filtro: drop-shadow(0 10px 30px rgba(168, 85, 247, 0.4));
+            insertar: -20%;
+
+        .encabezado h1 {
+            tamaño de fuente: clamp(2.5rem, 5vw, 4rem);
+            peso de fuente: 800;
+            espaciado entre letras: -0,03em;
+            margen inferior: 0,5rem;
+            fondo: gradiente lineal (135 grados, #c4b5fd 0%, #a78bfa 30%, #60a5fa 60%, #f0abfc 100%);
+            -webkit-background-clip: texto;
+            clip de fondo: texto;
+            -webkit-text-fill-color: transparente;
+            sombra de texto: 0 0 60px rgba(167, 139, 250, 0.3);
         }
 
-        .header h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 30%, #60a5fa 60%, #f0abfc 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 60px rgba(167, 139, 250, 0.3);
+        .encabezado .brand-sub {
+            tamaño de fuente: 0,95rem;
+            peso de fuente: 600;
+            color: var(--acento);
+            espaciado entre letras: 0,15em;
+            transformación de texto: mayúsculas;
+            margen inferior: 0,75rem;
         }
 
-        .header .brand-sub {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--accent);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-        }
-
-        .header p {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            font-weight: 400;
+        .encabezado p {
+            tamaño de fuente: 1.15rem;
+            color: var(--texto-secundario);
+            peso de fuente: 400;
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.5;
@@ -1785,76 +1790,76 @@
                 `;
             }
 
-            modalBody.innerHTML = html;
+            cuerpo modal.HTML interno = html;
         }
 
-        function closeModal() {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-            currentApp = null;
+        función cerrarModal() {
+            superposición modal.lista de clases.eliminatorio('activo');
+            documento.cuervo.estilo.rebosar = '';
+            aplicación real = nulo;
         }
 
-        modalClose.addEventListener('click', closeModal);
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) closeModal();
+        modalCerrar.addEventListener('clic', cerrarModal);
+        superposición modal.addEventListener('clic', (e) => {
+            si (e.objetivo === superposición modal) cerrarModal();
         });
 
-        modalSearch.addEventListener('input', (e) => {
-            if (currentApp) {
-                renderCommands(currentApp.commands, e.target.value);
+        búsqueda modal.addEventListener('entrada', (e) => {
+            si (aplicación real) {
+                comandos de renderizado(aplicación actual.comandos, e.objetivo.valor);
             }
         });
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-                closeModal();
+        documento.addEventListener('tecla abajo', (e) => {
+            si (e.clave === 'Escape' && superposición modal.lista de clases.contiene('activo')) {
+                cerrarModal();
             }
         });
 
-        // ============ SEARCH & FILTERS ============
-        const searchInput = document.getElementById('searchInput');
-        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        // ============ BÚSQUEDA Y FILTROS ============
+        const entrada de búsqueda = documento.getElementById('entrada de bolsa');
+        const alternarBtn = documento.Selector de consultasTodos('.toggle-btn');
 
-        toggleBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                toggleBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                filterApps();
+        alternarBtn.para cada uno(btn => {
+            btn.addEventListener('clic', () => {
+                alternarBtn.para cada uno(b => b.lista de clases.eliminatorio('activo'));
+                btn.lista de clases.agregar('activo');
+                aplicaciones de filtrado();
             });
         });
 
-        searchInput.addEventListener('input', filterApps);
+        entrada de búsqueda.addEventListener('entrada', aplicaciones de filtrado);
 
-        function filterApps() {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            const activePlatform = document.querySelector('.toggle-btn.active').dataset.platform;
+        función aplicaciones de filtrado() {
+            const termino de búsqueda = entrada de búsqueda.valor.aCaso Inferior().trim();
+            const Plataforma activa = documento.Selector de consultas('.toggle-btn.activo').dataset.plataforma;
 
-            document.querySelectorAll('.app-card').forEach(card => {
-                const app = appsData[card.dataset.app];
-                const name = app.name.toLowerCase();
-                const desc = app.desc.toLowerCase();
-                const matchesSearch = !searchTerm || name.includes(searchTerm) || desc.includes(searchTerm);
-                const matchesPlatform = activePlatform === 'all' || app.platform === activePlatform || app.platform === 'all';
+            documento.Selector de consultasTodos('.tarjeta de aplicación').para cada uno(card => {
+                const app = datos de aplicaciones[card.dataset.app];
+                const nombre = app.nombre.aCaso Inferior();
+                const desc = app.desc.aCaso Inferior();
+                const búsqueda de coincidencias = !termino de búsqueda || nombre.incluye(termino de búsqueda) || desc.incluye(término de búsqueda);
+htmlconst partidosPlataforma = Plataforma activa === 'todos' || app.plataforma === Plataforma activa || app.plataforma === 'todos';
 
-                card.style.display = (matchesSearch && matchesPlatform) ? '' : 'none';
+                card.estilo.visualizar = (búsqueda de coincidencias y partidosPlataforma) ? '' : 'ninguno';
             });
 
-            document.querySelectorAll('.category').forEach(cat => {
-                const visibleCards = Array.from(cat.querySelectorAll('.app-card'))
-                    .filter(c => c.style.display !== 'none');
-                cat.style.display = visibleCards.length > 0 ? '' : 'none';
+            documento.Selector de consultasTodos('.categoría').para cada uno(gato => {
+                const Tarjetas visibles = Array.desde(gato.Selector de consultasTodos('.tarjeta de aplicación'))
+                    .filtrado(c => c.estilo.visualizar !== 'ninguno');
+                gato.estilo.visualizar = Tarjetas visibles.longitud > 0 ? '' : 'ninguno';
             });
         }
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === '/' && document.activeElement !== searchInput && !modalOverlay.classList.contains('active')) {
-                e.preventDefault();
-                searchInput.focus();
+        documento.addEventListener('tecla abajo', (e) => {
+            si (e.clave === '/' && documento.elemento activo !== entrada de búsqueda && !superposición modal.lista de clases.contiene('activo')) {
+                e.PrevenirPredeterminado();
+                entrada de búsqueda.enfoque();
             }
         });
 
         // Init
-        renderCategories();
+        renderCategorías();
     </script>
-</body>
+</cuervo>
 </html>
