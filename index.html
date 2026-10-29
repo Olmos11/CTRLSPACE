@@ -1795,66 +1795,66 @@
         }
 
         modalClose.addEventListener('click', closeModal);
-        superposición modal.addEventListener('clic', (e) => {
-            si (e.objetivo === superposición modal) cerrarModal();
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
         });
 
-        búsqueda modal.addEventListener('entrada', (e) => {
-            si (aplicación actual) {
-                comandos de renderizado(aplicación actual.comandos, e.objetivo.valor);
+        modalSearch.addEventListener('input', (e) => {
+            if (currentApp) {
+                renderCommands(currentApp.commands, e.target.value);
             }
         });
 
-        documento.addEventListener('tecla abajo', (e) => {
-            si (e.clave === 'Escape' && superposición modal.lista de clases.contiene('activo')) {
-                cerrarModal();
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
             }
         });
 
-        // ============ BÚSQUEDA Y FILTROS ============// ============ BÚSQUEDA Y FILTROS ============
-        const entrada de búsqueda = documento.getElementById('entrada de bolsa');const entrada de búsqueda = documento.getElementById('entrada de búsqueda');
-        const alternarBtn = documento.Selector de consultasTodos('.toggle-btn');const alternarBtn = documento.Selector de consultasTodos('.toggle-btn');
+        // ============ SEARCH & FILTERS ============
+        const searchInput = document.getElementById('searchInput');
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
 
-        alternarBtn.para cada uno(btn => {alternarBtn.para cada uno(btn => {
-            btn.addEventListener('clic', () => {btn.addEventListener('clic', () => {
-                alternarBtn.para cada uno(b => b.lista de clases.eliminatorio('activo'));alternarBtn.para cada uno(b => b.lista de clases.eliminar('activo'));
-                btn.lista de clases.agregar('activo');btn.lista de clases.agregar('activo');
-                aplicaciones de filtrado();aplicaciones de filtrado();
-            });});
-        });});
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                toggleBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterApps();
+            });
+        });
 
-        entrada de búsqueda.addEventListener('entrada', aplicaciones de filtrado);entrada de búsqueda.addEventListener('entrada', aplicaciones de filtrado);
+        searchInput.addEventListener('input', filterApps);
 
-        función aplicaciones de filtrado() {función aplicaciones de filtrado() {
-            const termino de búsqueda = entrada de búsqueda.valor.aCaso Inferior().trim();const termino de búsqueda = entrada de búsqueda.valor.aCaso Inferior().trim();
-            const Plataforma activa = documento.Selector de consultas('.toggle-btn.activo').dataset.plataforma;const Plataforma activa = documento.querySelector('.toggle-btn.active').dataset.platform;
+        function filterApps() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const activePlatform = document.querySelector('.toggle-btn.active').dataset.platform;
 
-            documento.Selector de consultasTodos('.tarjeta de aplicación').para cada uno(tarjeta => {documento.Selector de consultasTodos('.tarjeta de aplicación').para cada uno(card => {
-                const app = datos de aplicaciones[card.dataset.app];const app = datos de aplicaciones[card.dataset.app];
-                const nombre = app.nombre.aCaso Inferior();const nombre = app.nombre.aCaso Inferior();
-                const desc = app.desc.aCaso Inferior();const desc = app.desc.aCaso Inferior();
-                const coincidenciasBuscar = !termino de búsqueda || nombre.incluye(termino de búsqueda) || desc.incluye(termino de búsqueda);const búsqueda de coincidencias = !searchTerm || name.includes(searchTerm) || desc.includes(searchTerm);
-                const partidosPlataforma = Plataforma activa === 'todos' || app.plataforma === Plataforma activa || app.plataforma === 'todos';const matchesPlatform = activePlatform === 'all' || app.platform === activePlatform || app.platform === 'all';
+            document.querySelectorAll('.app-card').forEach(card => {
+                const app = appsData[card.dataset.app];
+                const name = app.name.toLowerCase();
+                const desc = app.desc.toLowerCase();
+                const matchesSearch = !searchTerm || name.includes(searchTerm) || desc.includes(searchTerm);
+                const matchesPlatform = activePlatform === 'all' || app.platform === activePlatform || app.platform === 'all';
 
-                card.estilo.visualizar = (coincidenciasBuscar && coincidenciasPlataforma) ? '' : 'ninguno';card.estilo.visualizar = (búsqueda de coincidencias y matchesPlatform) ? '' : 'none';
-            });});
+                card.style.display = (matchesSearch && matchesPlatform) ? '' : 'none';
+            });
 
-            documento.Selector de consultasTodos('.categoría').para cada uno(gato => {documento.Selector de consultasTodos('.categoría').para cada uno(gato => {
-                const Tarjetas visibles = Array.desde(gato.Selector de consultasTodos('.tarjeta de aplicación'))const Tarjetas visibles = Array.desde(gato.Selector de consultasTodos('.app-card'))
-                    .filtrado(c => c.estilo.visualizar !== 'ninguno');filtrado(c => c.estilo.visualizar !== 'ninguno');
-                gato.estilo.visualizar = Tarjetas visibles.longitud > 0 ? '' : 'ninguno';gato.estilo.visualizar = Tarjetas visibles.longitud > 0 ? '' : 'none';
-            });});
+            document.querySelectorAll('.category').forEach(cat => {
+                const visibleCards = Array.from(cat.querySelectorAll('.app-card'))
+                    .filter(c => c.style.display !== 'none');
+                cat.style.display = visibleCards.length > 0 ? '' : 'none';
+            });
         }
 
-        documento.addEventListener('tecla abajo', (e) => {documento.addEventListener('tecla abajo', (e) => {
-            si (e.clave === '/' && documento.elemento activo !== entrada de búsqueda && !superposición modal.lista de clases.contiene('activo')) {si (e.key === '/' && document.activeElement !== searchInput && !modalOverlay.classList.contains('active')) {
-                e.PrevenirPredeterminado();e.PrevenirPredeterminado();
-                entrada de búsqueda.enfoque();entrada de búsqueda.enfoque();
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement !== searchInput && !modalOverlay.classList.contains('active')) {
+                e.preventDefault();
+                searchInput.focus();
             }
-        });});
+        });
 
-        // Init// Init
-        renderCategorías();renderCategorías();
-    </script></script>
-</cuervo>cuervo>
-</html>html>
+        // Init
+        renderCategories();
+    </script>
+</body>
+</html>
