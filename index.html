@@ -2,12 +2,6 @@
 <html lang="es">
 "es"
     <meta conjunto de caracteres=„UTF-8">
-    <link rel="manifestar" href="/manifest.json">
-<meta nombre="color del tema" contenido="#6366f1">
-<meta nombre="apple-mobile-web-app-capable" contenido="sí">
-<meta nombre="estilo de barra de estado de la aplicación web móvil de Apple" contenido="negro-traducido">
-<meta nombre="título de la aplicación web de Apple-Mobile" contenido=„Ctrl Espacio">
-    <meta nombre="ventana gráfica" contenido="ancho=ancho del dispositivo, escala inicial=1.0">
     <tipulo>CtrlSpace · Tu centro de comandos universal</tipulo>
     <meta nombre="descripción" contenido="CtrlSpace - Todos los atajos de teclado y comandos de Office, Adobe, Windows y Mac en un solo lugar">
     <link rel="icono" tipo="imagen/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='240' fill='%230f0524'/%3E%3Crect x='146' y='196' width='220' height='140' rx='28' fill='%236366f1'/%3E%3Ctext x='256' y='288' font-family='sans-serif' font-size='64' font-weight='800' fill='white' text-anchor='middle'%3ECtrl%3C/text%3E%3C/svg%3E">
@@ -1861,15 +1855,5 @@ htmlconst partidosPlataforma = Plataforma activa === 'todos' || app.plataforma =
         // Init
         renderCategorías();
     </script>
-<script>
-// Registrar Service Worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('Service Worker registrado'))
-      .catch(err => console.log('Error:', err));
-  });
-}
-</script>
 </cuervo>
 </html>
